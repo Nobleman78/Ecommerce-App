@@ -4,6 +4,11 @@ import './Header.css'
 import SelectDrop from '../SelectDrop/SelectDrop';
 import { useEffect, useState } from 'react';
 import Country from '../SelectDrop/Country';
+import compareIcon from '../../assets/icon-compare.svg'
+import wishlistIcon from '../../assets/icon-heart.svg'
+import cartIcon from '../../assets/icon-cart.svg'
+import userIcon from '../../assets/icon-user.svg'
+
 
 
 
@@ -59,7 +64,7 @@ const Header = () => {
 
                     </div>
                     {/* It will take 5 colums for small and big screens */}
-                    <div className='col-sm-5 '>
+                    <div className='col-sm-4 '>
                         {/* Header Search Start Here */}
                         <div className='header-search d-flex align-items-center  '>
                             <SelectDrop data={catagories}></SelectDrop>
@@ -73,12 +78,48 @@ const Header = () => {
                     </div>
                     {/* Header Search End Here */}
 
-                    <div className='col-sm-5 ms-4 '>
-                        <div className='country-box'>
-                            <Country data={countryList}></Country>
+
+                    {/*Location section start here */}
+                    <div className='col-sm-6 ms-4 d-flex align-items-center '>
+                        <div className='ml-auto d-flex align-items-center'>
+                            <div className='country-box'>
+                                <Country data={countryList}></Country>
+                            </div>
+                            {/* Compare, wishlist.. and other section start from here. */}
+                            <ul className='list list-inline mb-0 header-tabs'>
+                                <li className='list-inline-item'>
+                                    <span >
+                                        <img src={compareIcon} alt="Compare Icon" />
+                                        <span className='badge bg-success rounded-circle'>3</span>
+                                        Compare
+                                    </span>
+                                </li>
+                                <li className='list-inline-item'>
+                                    <span>
+                                        <img src={wishlistIcon} alt="Wishlist Icon" />
+                                        <span className='badge bg-success rounded-circle'>3</span>
+                                        Wishlist
+                                    </span>
+                                </li>
+                                <li className='list-inline-item'>
+                                    <span>
+                                        <img src={cartIcon} alt="Wishlist Icon" />
+                                        <span className='badge bg-success rounded-circle'>3</span>
+                                        Cart
+                                    </span>
+                                </li>
+                                <li className='list-inline-item'>
+                                    <span>
+                                        <img src={userIcon} alt="Wishlist Icon" />
+                                        <span className='badge bg-success rounded-circle'>3</span>
+                                        Account
+                                    </span>
+                                </li>
+                            </ul>
                         </div>
 
                     </div>
+                    {/* Locatioin section end here */}
                 </div>
             </div>
         </header>
