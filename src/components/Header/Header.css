@@ -22,7 +22,7 @@ header{
     border-radius: 5px;
    
 }
-/* This is a global css class which is coming from SetSelect.css */
+
 
 /* This is for the vertical line which is beside of dropdown button */
 header .header-search .selectDrop::after{
@@ -93,6 +93,55 @@ header span.wish-badge{
     
 
 }
+/* User Drop Down Menu Start */
+.user-dropdown-menu{
+    position: absolute;
+    top: 100%;
+    cursor: pointer;
+    font-size: 14px;
+    width: 170px;
+    height: auto;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
+    margin-top: 10px;
+    right: -45%;
+    border-radius: 10px;
+   
+
+}
+.user-dropdown-menu li{
+    list-style: none;
+    padding:10px 0px;
+    width: 90%;
+    text-align: left !important;
+    justify-content: flex-start !important;
+    margin-bottom: 5px;
+  
+    
+    
+}.user-dropdown-menu li:hover{
+    background-color: #8af8c5;
+    border-radius: 5px;
+    
+}
+
+
+.tracking-icon{
+    width: 20px;
+    height: 20px;
+}
+.wishlist-icon{
+    width: 20px;
+    height: 20px;
+}
+.setting-icon{
+    width: 20px;
+    height: 20px;
+}
+.signout-icon{
+    width: 20px;
+    height: 20px;
+}
+/* User Drop Down Menu End. */
 
 
 

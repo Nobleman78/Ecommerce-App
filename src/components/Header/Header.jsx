@@ -8,13 +8,16 @@ import compareIcon from '../../assets/icon-compare.svg'
 import wishlistIcon from '../../assets/icon-heart.svg'
 import cartIcon from '../../assets/icon-cart.svg'
 import userIcon from '../../assets/icon-user.svg'
-
-
-
-
+import { CiUser } from "react-icons/ci";
+import trackingIcon from '../../assets/tracking.png'
+import { CiHeart } from "react-icons/ci";
+import { CiSettings } from "react-icons/ci";
+import { FaSignOutAlt } from "react-icons/fa";
+import { ClickAwayListener } from '@mui/material';
 
 const Header = () => {
     // Initialize an array
+
     const catagories = [
         'Milk and dairies',
         'Wines and Drinks',
@@ -31,6 +34,7 @@ const Header = () => {
     ];
     // Defined a state to handle the counry data.
     const [countries, setCountries] = useState([])
+    const [isOpenDropDown, setOpenDropDown] = useState(false);
 
     // Defined an emty array to store the country name.
     const countryList = [];
@@ -51,6 +55,7 @@ const Header = () => {
     }
 
 
+    // This is handle DropDown of the User
 
     return (
         <header>
@@ -80,45 +85,62 @@ const Header = () => {
 
 
                     {/*Location section start here */}
-                    <div className='col-sm-6 ms-4 d-flex align-items-center '>
-                        <div className='ml-auto d-flex align-items-center'>
-                            <div className='country-box'>
-                                <Country data={countryList}></Country>
-                            </div>
-                            {/* Compare, wishlist.. and other section start from here. */}
-                            <ul className='list list-inline mb-0 header-tabs'>
-                                <li className='list-inline-item'>
-                                    <span >
-                                        <img src={compareIcon} alt="Compare Icon" />
-                                        <span className='badge bg-success rounded-circle'>3</span>
-                                        Compare
-                                    </span>
-                                </li>
-                                <li className='list-inline-item'>
-                                    <span>
-                                        <img src={wishlistIcon} alt="Wishlist Icon" />
-                                        <span className='badge bg-success rounded-circle'>3</span>
-                                        Wishlist
-                                    </span>
-                                </li>
-                                <li className='list-inline-item'>
-                                    <span>
-                                        <img src={cartIcon} alt="Wishlist Icon" />
-                                        <span className='badge bg-success rounded-circle'>3</span>
-                                        Cart
-                                    </span>
-                                </li>
-                                <li className='list-inline-item'>
-                                    <span>
-                                        <img src={userIcon} alt="Wishlist Icon" />
-                                        <span className='badge bg-success rounded-circle'>3</span>
-                                        Account
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
+                   
+                        <div className='col-sm-6 ms-4 d-flex align-items-center '>
+                            <div className='ml-auto d-flex align-items-center'>
+                                <div className='country-box'>
+                                    <Country data={countryList}></Country>
+                                </div>
+                                {/* Compare, wishlist.. and other section start from here. */}
+                                <ul className='list list-inline mb-0 header-tabs'>
+                                    <li className='list-inline-item'>
+                                        <span >
+                                            <img src={compareIcon} alt="Compare Icon" />
+                                            <span className='badge bg-success rounded-circle'>3</span>
+                                            Compare
+                                        </span>
+                                    </li>
+                                    <li className='list-inline-item'>
+                                        <span>
+                                            <img src={wishlistIcon} alt="Wishlist Icon" />
+                                            <span className='badge bg-success rounded-circle'>3</span>
+                                            Wishlist
+                                        </span>
+                                    </li>
+                                    <li className='list-inline-item'>
+                                        <span>
+                                            <img src={cartIcon} alt="Wishlist Icon" />
+                                            <span className='badge bg-success rounded-circle'>3</span>
+                                            Cart
+                                        </span>
+                                    </li>
+                                    <li className='list-inline-item'>
 
-                    </div>
+                                        <span onClick={() => setOpenDropDown(!isOpenDropDown)}>
+                                            <img src={userIcon} alt="Wishlist Icon" />
+                                            <span className='badge bg-success rounded-circle'>3</span>
+                                            Account
+                                        </span>
+                                        {
+                                            isOpenDropDown == true &&
+                                            <ul className='user-dropdown-menu'>
+                                                <li className=''><CiUser className='me-2 fs-5'></CiUser> My Account</li>
+                                                <li><img className='tracking-icon me-2' src={trackingIcon} alt="" />Order Tracking</li>
+                                                <li><CiHeart className='wishlist-icon me-2 '></CiHeart>My Wishlist</li>
+                                                <li><CiSettings className='setting-icon me-2'></CiSettings>Settings</li>
+                                                <li><FaSignOutAlt className='signout-icon me-2'></FaSignOutAlt>Sign Out</li>
+                                            </ul>
+                                        }
+
+                                    </li>
+                                </ul>
+                                {/* Cart,compare,User,wishlist section end here. */}
+                            </div>
+
+                        </div>
+                 
+
+
                     {/* Locatioin section end here */}
                 </div>
             </div>
