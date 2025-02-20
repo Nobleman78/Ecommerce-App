@@ -7,6 +7,13 @@ import {
 } from "react-router-dom";
 import Home from './components/Pages/Home';
 import Root from './components/Root/Root';
+import About from './components/Pages/About';
+import Groceries from './components/Pages/Groceries';
+import Blog from './components/Pages/Blog';
+import Fashion from './components/Pages/Fashion';
+import Contact from './components/Pages/Contact';
+import Shop from './components/Pages/Shop';
+import Electronics from './components/Pages/Electronics';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -15,7 +22,36 @@ const router = createBrowserRouter([
       {
         path:'home',
         element:<Home></Home>
+      },
+      {
+        path:'about',
+        element:<About></About>
+      },
+      {
+        path:'groceries',
+        element:<Groceries></Groceries>
+      },
+      {
+        path:'blog',
+        element:<Blog></Blog>
+      },
+      {
+        path:'fashion',
+        element:<Fashion></Fashion>
+      },
+      {
+        path:'contact',
+        element:<Contact></Contact>
+      },
+      {
+        path:'shop',
+        element:<Shop></Shop>
+      },
+      {
+        path:'electronics',
+        element:<Electronics></Electronics>
       }
+
     ] 
   },
 ]);
