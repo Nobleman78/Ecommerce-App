@@ -14,45 +14,46 @@ import Fashion from './components/Pages/Fashion';
 import Contact from './components/Pages/Contact';
 import Shop from './components/Pages/Shop';
 import Electronics from './components/Pages/Electronics';
+import ContextProvider from './components/ContextProvider/ContextProvider';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    children:[
+    children: [
       {
-        path:'home',
-        element:<Home></Home>
+        path: 'home',
+        element: <Home></Home>
       },
       {
-        path:'about',
-        element:<About></About>
+        path: 'about',
+        element: <About></About>
       },
       {
-        path:'groceries',
-        element:<Groceries></Groceries>
+        path: 'groceries',
+        element: <Groceries></Groceries>
       },
       {
-        path:'blog',
-        element:<Blog></Blog>
+        path: 'blog',
+        element: <Blog></Blog>
       },
       {
-        path:'fashion',
-        element:<Fashion></Fashion>
+        path: 'fashion',
+        element: <Fashion></Fashion>
       },
       {
-        path:'contact',
-        element:<Contact></Contact>
+        path: 'contact',
+        element: <Contact></Contact>
       },
       {
-        path:'shop',
-        element:<Shop></Shop>
+        path: 'shop',
+        element: <Shop></Shop>
       },
       {
-        path:'electronics',
-        element:<Electronics></Electronics>
+        path: 'electronics',
+        element: <Electronics></Electronics>
       }
 
-    ] 
+    ]
   },
 ]);
 
@@ -60,7 +61,10 @@ function App() {
 
   return (
     <div>
-      <RouterProvider router={router} />
+      <ContextProvider>
+        <RouterProvider router={router} />
+      </ContextProvider>
+
     </div>
   )
 }

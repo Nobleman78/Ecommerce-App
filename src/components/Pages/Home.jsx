@@ -1,8 +1,13 @@
 
 const Home = () => {
+   
     return (
-        <div>
-            <h3>Welcome to Home page</h3>
+        <div className="container-fluid">
+            <h2>Welcome to home page </h2>
+            <h3>ClickAwayListener Is not develop...Sorry for this...</h3>
+           
+           
+          
         </div>
     );
 };
