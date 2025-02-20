@@ -2,8 +2,8 @@ import { useState } from 'react';
 import PropTypes from 'prop-types'
 import { IoIosArrowDown } from "react-icons/io";
 import { ClickAwayListener } from '@mui/material';
-import './SelectDrop.css'
-const SelectDrop = ({data}) => {
+import './Catagory.css'
+const Catagory = ({data}) => {
 
     // Using state to manage the OpenSelector 
     const [openSelect, setOpenSelect] = useState(false);
@@ -65,9 +65,9 @@ const SelectDrop = ({data}) => {
 
     );
 };
-SelectDrop.propTypes = {
+Catagory.propTypes = {
     data:PropTypes.object
 }
 
 
-export default SelectDrop;
+export default Catagory;

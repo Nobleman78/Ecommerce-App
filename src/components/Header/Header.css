@@ -97,31 +97,40 @@ header span.wish-badge{
 .user-dropdown-menu{
     position: absolute;
     top: 100%;
-    cursor: pointer;
-    font-size: 14px;
-    width: 170px;
+    width: 180px;
     height: auto;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
+    left: -26px;
+    right: -48px;
+    background: #fff;
     margin-top: 10px;
-    right: -45%;
-    border-radius: 10px;
-   
-
+    z-index: 100;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 20%);
+    padding: 15px;
+    border-radius: 5px;
+ 
 }
 .user-dropdown-menu li{
     list-style: none;
-    padding:10px 0px;
-    width: 90%;
-    text-align: left !important;
-    justify-content: flex-start !important;
+    padding:5px 0px;
+    width: 100%;
     margin-bottom: 5px;
+    font-size: 13px;
+    cursor: pointer;
   
     
     
 }.user-dropdown-menu li:hover{
-    background-color: #8af8c5;
     border-radius: 5px;
+    color: #3bb77e;
     
+}
+.login-icon{
+    width: 20px;
+    height: 20px;
+}
+.registration-icon{
+    width: 20px;
+    height: 20px;
 }
 
 
