@@ -57,7 +57,7 @@ const Header = () => {
     return (
         <>
             <header>
-                <div className='container-fluid ps-2 '>
+                <div className='container-fluid ps-2  '>
                     <div className='raw d-flex'>
                         {/* It will take 2 colums for small and big screens. */}
                         <div className='col-sm-2 '>

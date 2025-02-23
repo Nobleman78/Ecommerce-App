@@ -1,0 +1,31 @@
+.rounded-img{
+    border-radius: 20px;
+}
+.caption{
+    top: 10%;
+    position: absolute;
+    margin-left: 80px;
+    margin-top: 30px;
+    font-family: 'Exo 2' ;
+    
+    
+}
+.text{
+    color: black;
+    font-size: 64px;
+    font-weight: 500;
+    width: 60%;
+}
+.carosel-input{
+    width: 30%;
+    padding: 15px 20px;
+    border-radius: 30px;
+}
+.carosel-btn{
+    border-radius: 30px;
+    margin-left: -45px;
+    background-color: #3bb77e;
+    border: #3bb77e;
+    padding: 15px 30px;
+    color: white;
+}

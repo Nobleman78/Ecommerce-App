@@ -8,7 +8,7 @@ import contactIcon from '../../assets/icon-headphone.svg'
 import { AuthContext } from '../ContextProvider/ContextProvider';
 import { ClickAwayListener } from '@mui/material';
 const Navigation = ({ data }) => {
-    const { homeData } = useContext(AuthContext)
+    const { homeData,groceriesData ,electronicsData,fashionData,aboutData,shopData} = useContext(AuthContext)
     const [isBrowseOpen, setBrowseOpen] = useState(false);
     const [isHomeButtonOpen, setHomeButtonOpen] = useState(false);
     const [isGroceriesButtonOpen, setGroceriesButtonOpen] = useState(false);
@@ -48,7 +48,7 @@ const Navigation = ({ data }) => {
                     </div>
                     {/* Navbar First Part End */}
                     {/* Navbar Middle Part Start */}
-                    <div className="col-sm-6 middle-part ">
+                    <div className="col-sm-7 middle-part ">
                         <ul className="d-flex list-style">
                             <ClickAwayListener onClickAway={() => setHomeButtonOpen(false)}>
                                 <li onClick={() => setHomeButtonOpen(!isHomeButtonOpen)}><NavLink className="home-nav" to="/home">Home</NavLink>
@@ -78,9 +78,9 @@ const Navigation = ({ data }) => {
                                         isGroceriesButtonOpen == true &&
                                         <div className="groceries-dropdown-menu">
                                             {
-                                                homeData.map((homedata, id) => {
+                                                groceriesData.map((groceriesData, id) => {
                                                     return (
-                                                        <li key={id}>{homedata}</li>
+                                                        <li key={id}>{groceriesData}</li>
                                                     )
                                                 })
                                             }
@@ -96,11 +96,11 @@ const Navigation = ({ data }) => {
                                     }
                                     {
                                         isElecButtonOpen == true &&
-                                        <div className="home-dropdown-menu">
+                                        <div className="electronics-dropdown-menu">
                                             {
-                                                homeData.map((homedata, id) => {
+                                                electronicsData.map((electronicsData, id) => {
                                                     return (
-                                                        <li key={id}>{homedata}</li>
+                                                        <li key={id}>{electronicsData}</li>
                                                     )
                                                 })
                                             }
@@ -116,11 +116,11 @@ const Navigation = ({ data }) => {
                                     }
                                     {
                                         isFashionButtonOpen == true &&
-                                        <div className="home-dropdown-menu">
+                                        <div className="fashion-dropdown-menu">
                                             {
-                                                homeData.map((homedata, id) => {
+                                                fashionData.map((fashionData, id) => {
                                                     return (
-                                                        <li key={id}>{homedata}</li>
+                                                        <li key={id}>{fashionData}</li>
                                                     )
                                                 })
                                             }
@@ -135,11 +135,11 @@ const Navigation = ({ data }) => {
                                     }
                                     {
                                         isAboutButtonOpen == true &&
-                                        <div className="home-dropdown-menu">
+                                        <div className="about-dropdown-menu">
                                             {
-                                                homeData.map((homedata, id) => {
+                                                aboutData.map((aboutData, id) => {
                                                     return (
-                                                        <li key={id}>{homedata}</li>
+                                                        <li key={id}>{aboutData}</li>
                                                     )
                                                 })
                                             }
@@ -155,11 +155,11 @@ const Navigation = ({ data }) => {
                                     }
                                     {
                                         isShopButtonOpen == true &&
-                                        <div className="home-dropdown-menu">
+                                        <div className="shop-dropdown-menu">
                                             {
-                                                homeData.map((homedata, id) => {
+                                                shopData.map((shopData, id) => {
                                                     return (
-                                                        <li key={id}>{homedata}</li>
+                                                        <li key={id}>{shopData}</li>
                                                     )
                                                 })
                                             }
@@ -194,7 +194,7 @@ const Navigation = ({ data }) => {
                     {/* Navbar Middle Part End */}
 
                     {/* Navbar Last Part Start */}
-                    <div className="col-sm-3 d-flex align-items-center">
+                    <div className="col-sm-2 d-flex align-items-center">
                         <div className='d-flex align-align-items-center'>
                             <span><img className='contact-icon mt-1' src={contactIcon} alt="Contact-Icon" /></span>
                             <div>

@@ -1,6 +1,8 @@
 import './App.css'
 import Header from './components/Header/Header'
 import './../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import './../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
+
 import {
   createBrowserRouter,
   RouterProvider,
