@@ -6,6 +6,7 @@ import { IoIosArrowUp } from "react-icons/io";
 import { NavLink } from 'react-router-dom';
 import contactIcon from '../../assets/icon-headphone.svg'
 import { AuthContext } from '../ContextProvider/ContextProvider';
+import { ClickAwayListener } from '@mui/material';
 const Navigation = ({ data }) => {
     const { homeData } = useContext(AuthContext)
     const [isBrowseOpen, setBrowseOpen] = useState(false);
@@ -16,6 +17,7 @@ const Navigation = ({ data }) => {
     const [isAboutButtonOpen, setAboutButtonOpen] = useState(false);
     const [isShopButtonOpen, setShopButtonOpen] = useState(false);
     const [isBlogButtonOpen, setBlogButtonOpen] = useState(false)
+
 
 
     return (
@@ -48,112 +50,125 @@ const Navigation = ({ data }) => {
                     {/* Navbar Middle Part Start */}
                     <div className="col-sm-6 middle-part ">
                         <ul className="d-flex list-style">
-                            <li onClick={() => setHomeButtonOpen(!isHomeButtonOpen)}><NavLink to="/home">Home</NavLink>
-                                {
-                                    isHomeButtonOpen ? <IoIosArrowUp className="arrowbutton"></IoIosArrowUp> : <IoIosArrowDown className="arrowbutton"></IoIosArrowDown>
-                                }
-                                {
-                                    isHomeButtonOpen == true &&
-                                    <div className="home-dropdown-menu">
-                                        {
-                                            homeData.map((homedata, id) => {
-                                                return (
-                                                    <li key={id}>{homedata}</li>
-                                                )
-                                            })
-                                        }
-                                    </div>
-                                }
-                            </li>
-                            <li onClick={() => setGroceriesButtonOpen(!isGroceriesButtonOpen)}><NavLink to="/groceries">Groceries</NavLink>
-                                {
-                                    isGroceriesButtonOpen ? <IoIosArrowUp className="arrowbutton"></IoIosArrowUp> : <IoIosArrowDown className="arrowbutton"></IoIosArrowDown>
-                                }
-                                {
-                                    isGroceriesButtonOpen == true &&
-                                    <div className="groceries-dropdown-menu">
-                                        {
-                                            homeData.map((homedata, id) => {
-                                                return (
-                                                    <li key={id}>{homedata}</li>
-                                                )
-                                            })
-                                        }
-                                    </div>
-                                }
-                            </li>
+                            <ClickAwayListener onClickAway={() => setHomeButtonOpen(false)}>
+                                <li onClick={() => setHomeButtonOpen(!isHomeButtonOpen)}><NavLink className="home-nav" to="/home">Home</NavLink>
+                                    {
+                                        isHomeButtonOpen ? <IoIosArrowUp className="arrowbutton"></IoIosArrowUp> : <IoIosArrowDown className="arrowbutton"></IoIosArrowDown>
+                                    }
+                                    {
+                                        isHomeButtonOpen == true &&
+                                        <div className="home-dropdown-menu">
+                                            {
+                                                homeData.map((homedata, id) => {
+                                                    return (
+                                                        <li key={id}>{homedata}</li>
+                                                    )
+                                                })
+                                            }
+                                        </div>
+                                    }
+                                </li>
+                            </ClickAwayListener>
+                            <ClickAwayListener onClickAway={() => setGroceriesButtonOpen(false)}>
+                                <li onClick={() => setGroceriesButtonOpen(!isGroceriesButtonOpen)}><NavLink to="/groceries">Groceries</NavLink>
+                                    {
+                                        isGroceriesButtonOpen ? <IoIosArrowUp className="arrowbutton"></IoIosArrowUp> : <IoIosArrowDown className="arrowbutton"></IoIosArrowDown>
+                                    }
+                                    {
+                                        isGroceriesButtonOpen == true &&
+                                        <div className="groceries-dropdown-menu">
+                                            {
+                                                homeData.map((homedata, id) => {
+                                                    return (
+                                                        <li key={id}>{homedata}</li>
+                                                    )
+                                                })
+                                            }
+                                        </div>
+                                    }
+                                </li>
+                            </ClickAwayListener>
 
-                            <li onClick={() => setElecButtonOpne(!isElecButtonOpen)}><NavLink to="/electronics">Electronics</NavLink>
-                                {
-                                    isElecButtonOpen ? <IoIosArrowUp className="arrowbutton"></IoIosArrowUp> : <IoIosArrowDown className="arrowbutton"></IoIosArrowDown>
-                                }
-                                {
-                                    isElecButtonOpen == true &&
-                                    <div className="home-dropdown-menu">
-                                        {
-                                            homeData.map((homedata, id) => {
-                                                return (
-                                                    <li key={id}>{homedata}</li>
-                                                )
-                                            })
-                                        }
-                                    </div>
-                                }
-                            </li>
+                            <ClickAwayListener onClickAway={() => setElecButtonOpne(false)}>
+                                <li onClick={() => setElecButtonOpne(!isElecButtonOpen)}><NavLink to="/electronics">Electronics</NavLink>
+                                    {
+                                        isElecButtonOpen ? <IoIosArrowUp className="arrowbutton"></IoIosArrowUp> : <IoIosArrowDown className="arrowbutton"></IoIosArrowDown>
+                                    }
+                                    {
+                                        isElecButtonOpen == true &&
+                                        <div className="home-dropdown-menu">
+                                            {
+                                                homeData.map((homedata, id) => {
+                                                    return (
+                                                        <li key={id}>{homedata}</li>
+                                                    )
+                                                })
+                                            }
+                                        </div>
+                                    }
+                                </li>
+                            </ClickAwayListener>
 
-                            <li onClick={() => setFashionButtonOpen(!isFashionButtonOpen)}><NavLink to="/fashion">Fashion</NavLink>
-                                {
-                                    isFashionButtonOpen ? <IoIosArrowUp className="arrowbutton"></IoIosArrowUp> : <IoIosArrowDown className="arrowbutton"></IoIosArrowDown>
-                                }
-                                {
-                                    isFashionButtonOpen == true &&
-                                    <div className="home-dropdown-menu">
-                                        {
-                                            homeData.map((homedata, id) => {
-                                                return (
-                                                    <li key={id}>{homedata}</li>
-                                                )
-                                            })
-                                        }
-                                    </div>
-                                }
-                            </li>
-                            <li onClick={() => setAboutButtonOpen(!isAboutButtonOpen)}><NavLink to="/about">About</NavLink>
-                                {
-                                    isAboutButtonOpen ? <IoIosArrowUp className="arrowbutton"></IoIosArrowUp> : <IoIosArrowDown className="arrowbutton"></IoIosArrowDown>
-                                }
-                                {
-                                    isAboutButtonOpen == true &&
-                                    <div className="home-dropdown-menu">
-                                        {
-                                            homeData.map((homedata, id) => {
-                                                return (
-                                                    <li key={id}>{homedata}</li>
-                                                )
-                                            })
-                                        }
-                                    </div>
-                                }
+                            <ClickAwayListener onClickAway={() => setFashionButtonOpen(false)}>
+                                <li onClick={() => setFashionButtonOpen(!isFashionButtonOpen)}><NavLink to="/fashion">Fashion</NavLink>
+                                    {
+                                        isFashionButtonOpen ? <IoIosArrowUp className="arrowbutton"></IoIosArrowUp> : <IoIosArrowDown className="arrowbutton"></IoIosArrowDown>
+                                    }
+                                    {
+                                        isFashionButtonOpen == true &&
+                                        <div className="home-dropdown-menu">
+                                            {
+                                                homeData.map((homedata, id) => {
+                                                    return (
+                                                        <li key={id}>{homedata}</li>
+                                                    )
+                                                })
+                                            }
+                                        </div>
+                                    }
+                                </li>
+                            </ClickAwayListener>
+                            <ClickAwayListener onClickAway={() => setAboutButtonOpen(false)}>
+                                <li onClick={() => setAboutButtonOpen(!isAboutButtonOpen)}><NavLink to="/about">About</NavLink>
+                                    {
+                                        isAboutButtonOpen ? <IoIosArrowUp className="arrowbutton"></IoIosArrowUp> : <IoIosArrowDown className="arrowbutton"></IoIosArrowDown>
+                                    }
+                                    {
+                                        isAboutButtonOpen == true &&
+                                        <div className="home-dropdown-menu">
+                                            {
+                                                homeData.map((homedata, id) => {
+                                                    return (
+                                                        <li key={id}>{homedata}</li>
+                                                    )
+                                                })
+                                            }
+                                        </div>
+                                    }
 
-                            </li>
-                            <li onClick={() => setShopButtonOpen(!isShopButtonOpen)}><NavLink to="/shop">Shop</NavLink>
-                                {
-                                    isShopButtonOpen ? <IoIosArrowUp className="arrowbutton"></IoIosArrowUp> : <IoIosArrowDown className="arrowbutton"></IoIosArrowDown>
-                                }
-                                {
-                                    isShopButtonOpen == true &&
-                                    <div className="home-dropdown-menu">
-                                        {
-                                            homeData.map((homedata, id) => {
-                                                return (
-                                                    <li key={id}>{homedata}</li>
-                                                )
-                                            })
-                                        }
-                                    </div>
-                                }
+                                </li>
+                            </ClickAwayListener>
+                            <ClickAwayListener onClickAway={()=>setShopButtonOpen(false)}>
+                                <li onClick={() => setShopButtonOpen(!isShopButtonOpen)}><NavLink to="/shop">Shop</NavLink>
+                                    {
+                                        isShopButtonOpen ? <IoIosArrowUp className="arrowbutton"></IoIosArrowUp> : <IoIosArrowDown className="arrowbutton"></IoIosArrowDown>
+                                    }
+                                    {
+                                        isShopButtonOpen == true &&
+                                        <div className="home-dropdown-menu">
+                                            {
+                                                homeData.map((homedata, id) => {
+                                                    return (
+                                                        <li key={id}>{homedata}</li>
+                                                    )
+                                                })
+                                            }
+                                        </div>
+                                    }
 
-                            </li>
+                                </li>
+                            </ClickAwayListener>
+                            <ClickAwayListener onClickAway={()=>setBlogButtonOpen(false)}>
                             <li onClick={() => setBlogButtonOpen(!isBlogButtonOpen)}><NavLink to="/blog">Blog</NavLink>
                                 {
                                     isBlogButtonOpen ? <IoIosArrowUp className="arrowbutton"></IoIosArrowUp> : <IoIosArrowDown className="arrowbutton"></IoIosArrowDown>
@@ -172,21 +187,19 @@ const Navigation = ({ data }) => {
                                 }
 
                             </li>
+                            </ClickAwayListener>
                             <li><NavLink to="/contact">Contact</NavLink></li>
                         </ul>
                     </div>
                     {/* Navbar Middle Part End */}
 
                     {/* Navbar Last Part Start */}
-                    <div className="col-sm-3 ">
-                        <div className='d-flex'>
+                    <div className="col-sm-3 d-flex align-items-center">
+                        <div className='d-flex align-align-items-center'>
+                            <span><img className='contact-icon mt-1' src={contactIcon} alt="Contact-Icon" /></span>
                             <div>
-                                <img src={contactIcon} alt="Contact-Icon" />
-                            </div>
-                            <div>
-                                <p className='mt-2 ms-2 fs-5'>+8801539794731</p>
-                                
-                              
+                                <p className=' ms-2 mb-0'>+8801539794731</p>
+                                <p className='mb-0 ms-3'>Support 24/7</p>
                             </div>
                         </div>
 
