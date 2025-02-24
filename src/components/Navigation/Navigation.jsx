@@ -8,6 +8,7 @@ import contactIcon from '../../assets/icon-headphone.svg'
 import { AuthContext } from '../ContextProvider/ContextProvider';
 import { ClickAwayListener } from '@mui/material';
 const Navigation = ({ data }) => {
+
     const { homeData,groceriesData ,electronicsData,fashionData,aboutData,shopData} = useContext(AuthContext)
     const [isBrowseOpen, setBrowseOpen] = useState(false);
     const [isHomeButtonOpen, setHomeButtonOpen] = useState(false);
@@ -17,6 +18,7 @@ const Navigation = ({ data }) => {
     const [isAboutButtonOpen, setAboutButtonOpen] = useState(false);
     const [isShopButtonOpen, setShopButtonOpen] = useState(false);
     const [isBlogButtonOpen, setBlogButtonOpen] = useState(false)
+    const [selectIndex, setSelectIndex] = useState(0);
 
 
 
@@ -37,6 +39,7 @@ const Navigation = ({ data }) => {
                                     data.map((data, id) => {
                                         return (
                                             <li key={id}>{data}</li>
+                                            
                                         )
                                     })
                                 }
@@ -202,12 +205,6 @@ const Navigation = ({ data }) => {
                                 <p className='mb-0 ms-3'>Support 24/7</p>
                             </div>
                         </div>
-
-
-
-
-
-
 
                     </div>
 

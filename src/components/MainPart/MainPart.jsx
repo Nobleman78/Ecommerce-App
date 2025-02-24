@@ -1,14 +1,17 @@
 import './MainPart.css'
 import sliderOne from '../../assets/Slider.png'
 import sliderTwo from '../../assets/Slider-2.png'
+
+
 const MainPart = () => {
     return (
         <div className='container-fluid mt-4 mb-3'>
+            {/* Carousel Part Start */}
             <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                   
+
                 </div>
                 <div className="carousel-inner">
                     <div className="carousel-item active">
@@ -20,7 +23,7 @@ const MainPart = () => {
                                 <input className='carosel-input my-4' type="text" placeholder='Enter your email' />
                                 <button className='carosel-btn my-4' type='submit' tabIndex="-1">Subscribe</button>
                             </div>
-                          
+
                         </div>
                     </div>
                     <div className="carousel-item">
@@ -32,10 +35,10 @@ const MainPart = () => {
                                 <input className='carosel-input my-4' type="text" placeholder='Enter your email' />
                                 <button className='carosel-btn my-4' type='submit' tabIndex="-1">Subscribe</button>
                             </div>
-                          
-                            
-                            
-                          
+
+
+
+
                         </div>
                     </div>
                 </div>
@@ -48,6 +51,12 @@ const MainPart = () => {
                     <span className="visually-hidden">Next</span>
                 </button>
             </div>
+
+            {/* Carousel Part End */}
+
+            
+
+
         </div>
 
 

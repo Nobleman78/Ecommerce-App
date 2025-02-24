@@ -1,0 +1,44 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css');
+
+.cat-slider-section{
+    width: 100%;
+    height: auto;
+    padding: 30px 0px;
+}
+
+.cat-slider-main .item{
+    background:#ccc ;
+    height: 150px;
+    text-align: center;
+    padding: 10px;
+    
+
+}
+.cat-slider-main .slick-slide{
+    padding-right: 20px;
+}
+
+
+
+
+
+
+
+
+/* Slick Arrow Part */
+.slick-arrow{
+  
+    width: 30px;
+    border-radius: 50%;
+    z-index: 100;
+    height: 20px;   
+}
+
+.slick-arrow.slick-next{
+    right: 2%;
+    
+}
+.slick-arrow.slick-prev{
+    left: 2%;
+}
