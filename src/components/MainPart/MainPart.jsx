@@ -1,6 +1,8 @@
 import './MainPart.css'
 import sliderOne from '../../assets/Slider.png'
 import sliderTwo from '../../assets/Slider-2.png'
+import CatagorySlider from '../CatSlider/CatagorySlider';
+import Banner from '../Banner/Banner';
 
 
 const MainPart = () => {
@@ -55,7 +57,8 @@ const MainPart = () => {
             {/* Carousel Part End */}
 
             
-
+            <CatagorySlider></CatagorySlider>
+            <Banner></Banner>
 
         </div>
 

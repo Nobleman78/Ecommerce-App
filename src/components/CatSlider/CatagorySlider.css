@@ -1,6 +1,8 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css');
-
+body{
+    font-family: 'Exo 2';
+}
 .cat-slider-section{
     width: 100%;
     height: auto;
@@ -13,23 +15,23 @@
 /* Item Part Start */
 
 .item-img{
-    width: 50%;
+    width: 70%;
     margin: 10px auto;
-    height: 50px;
+    height: 70px;
    
     
 }
 
 .cat-slider-main .item-1{
-   
     text-align: center;
     padding: 10px;
     cursor: pointer;
     border-radius: 10px;
     height: auto ;
     background: #ade0dc;
+    
 }
-.cat-slider-main .item .info-1{
+.cat-slider-main .item-1 .info-1{
     margin: auto;
     display: flex;
     align-items: center;
@@ -37,6 +39,8 @@
     flex-direction: column;
     
 }
+
+
 .cat-slider-main .item-2{
    
     text-align: center;

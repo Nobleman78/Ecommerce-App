@@ -1,0 +1,75 @@
+/* Box Part Start */
+.box{
+    position: relative;
+    
+}
+.box img{
+    border-radius: 10px;
+}
+/* Box Part End */
+
+/* Banner One  Start */
+.banner-one-info{
+    position: absolute;
+    top: 30%;
+    padding: 0px 30px;
+}
+.banner-one-info p{
+    width: 70%;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: 'Exo 2';
+}
+.banner-one-info button{
+    border: 1px solid #3bb77e;
+    background: #3bb77e;
+    padding:  5px 10px;
+    color: white;
+    border-radius: 5px;
+}
+/* Banner One End */
+
+
+/* Banner Two Start */
+.banner-two-info{
+    position: absolute;
+    top: 30%;
+    padding: 0px 30px;
+}
+.banner-two-info p{
+    width: 80%;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: 'Exo 2';
+}
+.banner-two-info button{
+    border: 1px solid #3bb77e;
+    background: #3bb77e;
+    padding:  5px 10px;
+    color: white;
+    border-radius: 5px;
+}
+/* Banner Two End */
+
+
+/* Banner Three Start */
+.banner-three-info{
+    position: absolute;
+    top: 30%;
+    padding: 0px 30px;
+}
+.banner-three-info p{
+    width: 80%;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: 'Exo 2';
+    
+}
+.banner-three-info button{
+    border: 1px solid #3bb77e;
+    background: #3bb77e;
+    padding:  5px 10px;
+    color: white;
+    border-radius: 5px;
+}
+/* Banner Three End */

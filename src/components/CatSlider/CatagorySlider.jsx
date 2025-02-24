@@ -35,15 +35,16 @@ const CatagorySlider = () => {
                     <div className='item-1 '>
                         <div className='info-1 '>
                             <img className='item-img' src={imageOne} alt="" />
-                            <p>imageOne and Milk</p>
+                            <p className='catagory-name'>Cake </p>
                             <p>6 Items</p>
+                        
                         </div>
 
                     </div>
                     <div className='item-2 '>
                         <div className='info-2'>
                             <img className='item-img' src={imageOne} alt="" />
-                            <p>imageOne and Milk</p>
+                            <p>Vegetables</p>
                             <p>6 Items</p>
                         </div>
 
@@ -51,7 +52,7 @@ const CatagorySlider = () => {
                     <div className='item-3 '>
                         <div className='info-3'>
                             <img className='item-img' src={imageTwo} alt="" />
-                            <p>Cake and Milk</p>
+                            <p>Pet Toy</p>
                             <p>6 Items</p>
                         </div>
 
@@ -59,7 +60,7 @@ const CatagorySlider = () => {
                     <div className='item-4 '>
                         <div className='info-4 '>
                             <img className='item-img' src={imageThree} alt="" />
-                            <p>Cake and Milk</p>
+                            <p>Fast Food</p>
                             <p>6 Items</p>
                         </div>
 
@@ -67,7 +68,7 @@ const CatagorySlider = () => {
                     <div className='item-5 '>
                         <div className='info-5'>
                             <img className='item-img' src={imageFour} alt="" />
-                            <p>Cake and Milk</p>
+                            <p>Dairies</p>
                             <p>6 Items</p>
                         </div>
 
@@ -75,7 +76,7 @@ const CatagorySlider = () => {
                     <div className='item-6 '>
                         <div className='info-6'>
                             <img className='item-img' src={imageFive} alt="" />
-                            <p>Cake and Milk</p>
+                            <p>Meat </p>
                             <p>6 Items</p>
                         </div>
 
@@ -83,7 +84,7 @@ const CatagorySlider = () => {
                     <div className='item-7 '>
                         <div className='info-7'>
                             <img className='item-img' src={imageSix} alt="" />
-                            <p>Cake and Milk</p>
+                            <p>Fish</p>
                             <p>6 Items</p>
                         </div>
 
@@ -91,7 +92,7 @@ const CatagorySlider = () => {
                     <div className='item-8 '>
                         <div className='info-8'>
                             <img className='item-img' src={imageSeven} alt="" />
-                            <p>Cake and Milk</p>
+                            <p>Electronics</p>
                             <p>6 Items</p>
                         </div>
 
@@ -99,7 +100,7 @@ const CatagorySlider = () => {
                     <div className='item-9 '>
                         <div className='info-9'>
                             <img className='item-img' src={imageSeven} alt="" />
-                            <p>Cake and Milk</p>
+                            <p>Fruits</p>
                             <p>6 Items</p>
                         </div>
 
@@ -107,7 +108,7 @@ const CatagorySlider = () => {
                     <div className='item-10 '>
                         <div className='info-10'>
                             <img className='item-img' src={imageSeven} alt="" />
-                            <p>Cake and Milk</p>
+                            <p>Wines</p>
                             <p>6 Items</p>
                         </div>
 
