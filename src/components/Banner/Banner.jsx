@@ -1,6 +1,7 @@
 import bannerImageOne from '../../assets/1.png'
 import bannerImageTwo from '../../assets/2.png'
 import bannerImageThree from '../../assets/3.png'
+import { FaArrowRightLong } from "react-icons/fa6";
 import './Banner.css'
 
 
@@ -14,7 +15,7 @@ const Banner = () => {
                             <img src={bannerImageOne} className='w-100 ' alt="" />
                             <div className='banner-one-info'>
                                 <p>Everday Fresh and Clean Our Products.</p>
-                                <button>Shop Now</button>
+                                <button>Shop Now <FaArrowRightLong className='banner-three-arrow'></FaArrowRightLong></button>
                             </div>
 
                         </div>
@@ -25,7 +26,7 @@ const Banner = () => {
                             <img src={bannerImageTwo} className='w-100' alt="" />
                             <div className='banner-two-info'>
                                 <p>Make Your Breakfast Healthy and Easy.</p>
-                                <button>Shop Now</button>
+                                <button>Shop Now <FaArrowRightLong></FaArrowRightLong></button>
                             </div>
 
                         </div>
@@ -36,7 +37,7 @@ const Banner = () => {
                             <img src={bannerImageThree} className='w-100' alt="" />
                             <div className='banner-three-info'>
                                 <p>The best organic Product Online.</p>
-                                <button>Shop Now</button>
+                                <button>Shop Now <FaArrowRightLong></FaArrowRightLong></button>
                             </div>
 
                         </div>

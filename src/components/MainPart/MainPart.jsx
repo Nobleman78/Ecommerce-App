@@ -3,6 +3,7 @@ import sliderOne from '../../assets/Slider.png'
 import sliderTwo from '../../assets/Slider-2.png'
 import CatagorySlider from '../CatSlider/CatagorySlider';
 import Banner from '../Banner/Banner';
+import PopularProduct from '../PopularProducts/PopularProduct';
 
 
 const MainPart = () => {
@@ -59,6 +60,8 @@ const MainPart = () => {
             
             <CatagorySlider></CatagorySlider>
             <Banner></Banner>
+            <PopularProduct></PopularProduct>
+
 
         </div>
 
