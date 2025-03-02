@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './CatagorySlider.css'
 import imageOne from '../../assets/image-1.png'
 import imageTwo from '../../assets/image-2.png'
@@ -107,7 +107,7 @@ const CatagorySlider = () => {
                     </div>
                     <div className='item-10 '>
                         <div className='info-10'>
-                            <img className='item-img' src={imageSeven} alt="" />
+                            <img className='item-img' src={imageEight} alt="" />
                             <p>Wines</p>
                             <p>6 Items</p>
                         </div>

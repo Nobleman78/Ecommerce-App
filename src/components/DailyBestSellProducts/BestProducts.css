@@ -1,0 +1,95 @@
+/* Best Deal Banner Part */
+.best-deal-img{
+    border-radius: 10px;
+}
+.best-deal-title{
+    top: 10%;
+    font-size: 35px;
+
+}
+.best-deal-btn{
+    top: 70%;
+    left: 18%;
+}
+/* Best Deal Banner Part End */
+
+
+/* This is the main container of the slick slide */
+.best-slider-section{
+    width: 100%;
+    height: auto;
+    padding: 30px 0px;
+}
+
+
+
+/* Using this is i am making some space between best the catagory */
+.best-slider-main .slick-slide{
+    padding-right: 20px;
+}
+
+/* Best Catagory Items Start */
+.best-slider-main .best-item-1{
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    height: auto ;
+    border: 1px solid green;
+}
+.best-slider-main .best-item-2{
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    height: auto ;
+    border: 1px solid green;
+}
+.best-slider-main .best-item-3{
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    height: auto ;
+    border: 1px solid green;
+}
+.best-slider-main .best-item-4{
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    height: auto ;
+    border: 1px solid green;
+}
+.best-slider-main .best-item-5{
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    height: auto ;
+    border: 1px solid green;
+}
+.best-slider-main .best-item-6{
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    height: auto ;
+    border: 1px solid green;
+}
+/* Best Catagory Item Part End */
+
+
+
+/* Slider Arrow Part Start*/
+.best-slider-main .slick-arrow.slick-next{
+    right: 30px;
+    top: 45%;
+
+}
+.best-slider-main .slick-arrow.slick-prev{
+    right: 60px;
+   
+    top: 45%;
+}
+/* Slider Arrow Part End */

@@ -4,6 +4,7 @@ import sliderTwo from '../../assets/Slider-2.png'
 import CatagorySlider from '../CatSlider/CatagorySlider';
 import Banner from '../Banner/Banner';
 import PopularProduct from '../PopularProducts/PopularProduct';
+import BestProducts from '../DailyBestSellProducts/BestProducts';
 
 
 const MainPart = () => {
@@ -61,6 +62,7 @@ const MainPart = () => {
             <CatagorySlider></CatagorySlider>
             <Banner></Banner>
             <PopularProduct></PopularProduct>
+            <BestProducts></BestProducts>
 
 
         </div>
