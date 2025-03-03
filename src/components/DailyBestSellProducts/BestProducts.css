@@ -15,7 +15,7 @@
 
 
 /* This is the main container of the slick slide */
-.best-slider-section{
+.best-slider{
     width: 100%;
     height: auto;
     padding: 30px 0px;
@@ -30,7 +30,7 @@
 
 /* Best Catagory Items Start */
 .best-slider-main .best-item-1{
-    text-align: center;
+   
     padding: 10px;
     cursor: pointer;
     border-radius: 10px;
@@ -38,7 +38,7 @@
     border: 1px solid green;
 }
 .best-slider-main .best-item-2{
-    text-align: center;
+    
     padding: 10px;
     cursor: pointer;
     border-radius: 10px;
@@ -46,7 +46,7 @@
     border: 1px solid green;
 }
 .best-slider-main .best-item-3{
-    text-align: center;
+    
     padding: 10px;
     cursor: pointer;
     border-radius: 10px;
@@ -54,7 +54,7 @@
     border: 1px solid green;
 }
 .best-slider-main .best-item-4{
-    text-align: center;
+  
     padding: 10px;
     cursor: pointer;
     border-radius: 10px;
@@ -62,7 +62,7 @@
     border: 1px solid green;
 }
 .best-slider-main .best-item-5{
-    text-align: center;
+  
     padding: 10px;
     cursor: pointer;
     border-radius: 10px;
@@ -70,7 +70,7 @@
     border: 1px solid green;
 }
 .best-slider-main .best-item-6{
-    text-align: center;
+
     padding: 10px;
     cursor: pointer;
     border-radius: 10px;
@@ -88,8 +88,38 @@
 
 }
 .best-slider-main .slick-arrow.slick-prev{
-    right: 60px;
-   
+    right: 60px; 
     top: 45%;
 }
 /* Slider Arrow Part End */
+
+/* Quick View, Compare Item, Add to wishlist Part Start */
+.overlay{
+    position: absolute ;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.overlay ul{
+    position: absolute;
+    top: 20%;
+    width: 110px;
+    height: 40px;
+    background: white;
+    border-radius: 5px;
+    display: none;
+}
+.overlay:hover ul{
+    display: block;
+}
+.overlay ul li a{
+    display: block;
+    border-right: 1px solid green;
+  
+}
