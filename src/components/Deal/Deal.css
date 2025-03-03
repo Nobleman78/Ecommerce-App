@@ -1,0 +1,57 @@
+.deal-image-one{
+    border-radius: 20px;
+}
+.deal-image-two{
+    border-radius: 20px;
+}
+.deal-main {
+    left: 8.5%;
+    transition: 0.4s ease;
+
+}
+.deal-main:hover{
+    transform: translateY(-5px);
+}
+.deal-main .duration ul li{
+    padding: 0px 10px;
+    font-size: 20px;
+    background: #fff;
+    width: 70px;
+    border-radius: 10px;
+    transition: 0.4s ease;
+  
+   
+}
+
+.daily-deal-card{
+    top: 100%;
+    left:-10%;
+    right: -10%;
+    border-radius: 10px;
+    transition: 0.4s ease;
+    
+}
+
+.deal-main-two{
+    left: 60%;
+    transition: 0.4s ease;
+}
+.deal-main-two:hover{
+    transform: translateY(-5px);
+}
+.deal-main-two .duration-two ul li{
+    padding: 0px 10px;
+    font-size: 20px;
+    background: #fff;
+    width: 70px;
+    border-radius: 10px;
+    transition: 0.4s ease;
+  
+}
+.daily-deal-card-two{
+    top: 100%;
+    left:-10%;
+    right: -10%;
+    border-radius: 10px;
+    transition: 0.4s ease;
+}

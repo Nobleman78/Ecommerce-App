@@ -5,6 +5,7 @@ import CatagorySlider from '../CatSlider/CatagorySlider';
 import Banner from '../Banner/Banner';
 import PopularProduct from '../PopularProducts/PopularProduct';
 import BestProducts from '../DailyBestSellProducts/BestProducts';
+import Deal from '../Deal/Deal';
 
 
 const MainPart = () => {
@@ -63,6 +64,7 @@ const MainPart = () => {
             <Banner></Banner>
             <PopularProduct></PopularProduct>
             <BestProducts></BestProducts>
+            <Deal></Deal>
 
 
         </div>
