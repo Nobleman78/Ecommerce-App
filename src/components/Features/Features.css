@@ -1,0 +1,71 @@
+.iconOne-info{
+    border: 1px solid #ced4da;
+    background: #f0f3f5;
+    border-radius: 10px;
+    width: 18.5%;
+   
+    
+}
+.iconTwo-info{
+    border: 1px solid #ced4da;
+    background: #f0f3f5;
+    border-radius: 10px;
+    width: 18.5%;
+}
+.iconThree-info{
+    border: 1px solid #ced4da;
+    background: #f0f3f5;
+    border-radius: 10px;
+    width: 18.5%;
+}
+.iconFive-info{
+    border: 1px solid #ced4da;
+    background: #f0f3f5;
+    border-radius: 10px;
+    width: 18.5%;
+}
+.iconFour-info {
+    border: 1px solid #ced4da;
+    background: #f0f3f5;
+    border-radius: 10px;
+    width: 18.5%;
+}
+/* Icon-One */
+.iconOne-img{
+    transition: 0.4s ease;
+
+}
+.iconOne-info:hover .iconOne-img {
+    transform: translateY(-5px);
+}
+/* Icon-two */
+.iconTwo-img{
+    transition: 0.4s ease;
+}
+.iconTwo-info:hover .iconTwo-img{
+    transform: translateY(-5px);
+}
+
+
+/* Icon Three */
+.iconThree-img{
+    transition: 0.4s ease;
+}
+.iconThree-info:hover .iconThree-img{
+    transform: translateY(-5px);
+}
+/* Icon Four */
+.iconFour-img{
+    transition: 0.4s ease;
+
+}
+.iconFour-info:hover .iconFour-img {
+    transform: translateY(-5px);
+}
+/* Icon Five */
+.iconFive-img{
+    transition: 0.4s ease;
+}
+.iconFive-info:hover .iconFive-img{
+    transform: translateY(-5px);
+}
