@@ -1,0 +1,16 @@
+.news-letter-img{
+    width: 500px;
+    height: 300px;
+}
+.newsletter-main-container{
+    background-color: #9decd4;
+    border-radius: 20px;
+}
+.newsletter-input-text{
+    border-radius: 30px;
+}
+.newsletter-btn{
+    border-radius: 30px;
+    margin-left: -40px;
+
+}

@@ -6,7 +6,7 @@ const Deal = () => {
     return (
         <div className='container-fluid  '>
             <h2>Deal Of the Day</h2>
-            <div className="w-75 mx-auto mb-5  position-relative ">
+            <div className="w-75 mx-auto mb-5  position-relative  ">
                 <div className="row mt-4">
                     <div className="col-12 col-md-12 col-lg-6 mb-4   ">
                         <img className='w-100 deal-image-one ' src={dealItemOne} alt="" />
@@ -45,7 +45,7 @@ const Deal = () => {
 
 
                             {/* Card Info Div Start Here */}
-                            <div className='position-absolute daily-deal-card  bg-white p-4 '>
+                            <div className='position-absolute daily-deal-card shadow-lg bg-white p-4 '>
                                 <p> All Natural Italian-Style Chicken Meatballs </p>
                                 <span></span>
                                 <p className='fw-bold'>Sold By <span className='text-success'>GoPro</span></p>
@@ -60,7 +60,7 @@ const Deal = () => {
                     {/* First Pat End */}
                     {/* Second Part Start */}
 
-                    <div className="col-12 my-sm-6 col-md-12 col-lg-6  ">
+                    <div className="col-12 my-sm-6 col-md-12 col-lg-6 mb-5 ">
                         <img className='w-100 deal-image-two' src={dealItemTwo} alt="" />
                         <div className='position-absolute deal-main-two top-50'>
                             <div className='duration-two'>
@@ -97,7 +97,7 @@ const Deal = () => {
 
 
                             {/* Card Info Div Start Here */}
-                            <div className='position-absolute daily-deal-card-two  bg-white p-4 '>
+                            <div className='position-absolute daily-deal-card-two shadow-lg  bg-white p-4 '>
                                 <p> All Natural Italian-Style Chicken Meatballs </p>
                                 <span></span>
                                 <p className='fw-bold'>Sold By <span className='text-success'>GoPro</span></p>
