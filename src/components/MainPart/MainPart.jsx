@@ -7,8 +7,7 @@ import PopularProduct from '../PopularProducts/PopularProduct';
 import BestProducts from '../DailyBestSellProducts/BestProducts';
 import Deal from '../Deal/Deal';
 import Headline from '../Headline/Headline';
-import Newsletter from '../Newsletter/Newsletter';
-import Features from '../Features/Features';
+
 
 
 const MainPart = () => {
@@ -69,8 +68,7 @@ const MainPart = () => {
             <BestProducts></BestProducts>
             <Deal></Deal>
             <Headline></Headline>
-            <Newsletter></Newsletter>
-            <Features></Features>
+            
 
 
         </div>

@@ -115,7 +115,7 @@ const Header = () => {
                                     <li className='list-inline-item'>
 
                                         <span onClick={() => setOpenDropDown(!isOpenDropDown)}>
-                                            <img src={userIcon} alt="Wishlist Icon" />
+                                            <img src={userIcon} alt="User Icon" />
                                             <span className='badge bg-success rounded-circle'>3</span>
                                             Login/Register
                                         </span>

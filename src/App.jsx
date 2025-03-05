@@ -15,7 +15,7 @@ import ContextProvider from './components/ContextProvider/ContextProvider';
 
 import MainPart from "./components/MainPart/MainPart";
 import Footer from './components/Footer/Footer.jsx';
-import Listing from './components/Pages/Listing.jsx';
+import Listing from './components/Pages/Listing/Listing.jsx';
 import Newsletter from './components/Newsletter/Newsletter.jsx';
 import Features from './components/Features/Features.jsx';
 

@@ -1,0 +1,12 @@
+.listingPage{
+
+    padding: 45px 0px;
+    margin-top:10px;
+}
+.listingPage .breadCrumb{
+
+    padding: 45px 25px ;
+    background: #d8f1e5;
+    border-radius: 10px;
+
+}

@@ -23,7 +23,7 @@ const Navigation = ({ data }) => {
 
 
     return (
-        <div className="navbar ">
+        <div className="navbar mx-auto ">
             <div className="container-fluid">
                 <div className="raw d-flex align-items-center">
                     <div className="col-sm-3 navbar-first-part">

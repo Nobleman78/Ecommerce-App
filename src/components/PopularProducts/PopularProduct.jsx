@@ -376,7 +376,7 @@ const PopularProduct = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-12 col-md-6 col-lg-3 my-5 ">
+                <div className="col-12 col-md-6 col-lg-4 my-5 ">
                     <div className="popular-products ">
                         <div className='image-wrapper'>
                             <img className='img-fluid ' src={itemNine} alt="" />
@@ -421,7 +421,7 @@ const PopularProduct = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-12 col-md-6 col-lg-3 my-5">
+                <div className="col-12 col-md-6 col-lg-4 my-5">
                     <div className="popular-products ">
                         <div className='image-wrapper'>
                             <img className='img-fluid ' src={itemTen} alt="" />
