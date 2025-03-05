@@ -6,7 +6,8 @@ import { IoIosCheckmark } from "react-icons/io";
 import Sidebar from '../../Sidebar/Sidebar';
 import PopularProduct from '../../PopularProducts/PopularProduct';
 import { useState } from 'react';
-import sortBy from 'sort-by';
+import { ClickAwayListener } from '@mui/material';
+
 
 const Listing = () => {
     const [isshowDropDown, setShowDropDown] = useState(false)
@@ -19,10 +20,10 @@ const Listing = () => {
         setPageNumber(value)
     }
 
-   const [sortby, setSortBy] = useState('Default')
-   const handleSortBy=(value)=>{
-    setSortBy(value)
-   }
+    const [sortby, setSortBy] = useState('Default')
+    const handleSortBy = (value) => {
+        setSortBy(value)
+    }
 
     return (
         <div className="container-fluid">
@@ -44,12 +45,13 @@ const Listing = () => {
                 </div>
                 {/* Listing Data */}
                 <div className='listingData'>
-                    <div className='row'>
-                        <div className='col-12 col-md-12 col-lg-3  '>
-                            <Sidebar></Sidebar>
+                    <div className='row d-flex'>
+                        <div className='col-12 col-md-12 col-lg-3 sideBar '>
+                            <Sidebar ></Sidebar>
 
                         </div>
-                        <div className='col-12 col-md-12 col-lg-9 '>
+                        {/* Main Content */}
+                        <div className='col-12 col-md-12 col-lg-9 main-content '>
                             <div className='d-flex justify-content-between '>
                                 <p className='mt-4 ms-4'>We find <span className='text-success'>34</span> items for you</p>
                                 <div className='d-flex align-items-center me-5 gap-2 mt-4 ms-4' >
@@ -60,24 +62,26 @@ const Listing = () => {
                                         {
                                             isshowDropDown == true &&
                                             <div className='show-dropdown-menu'>
-                                                <ul className='list list-inline cursor position-relative'>
+                                                <ul className='list list-inline  cursor position-relative'>
 
                                                     {
 
-                                                        [12, 24, 36].map((value) => (
-                                                            <li className=' d-flex gap-3  my-2  '
-                                                                key={value}
-                                                                onClick={() => handleItemsNumber(value)}
+                                                        [12, 24, 36].map((value,idx) => (
+                                                            <ClickAwayListener key={idx} onClickAway={()=>setShowDropDown(false)}>
+                                                                <li className=' d-flex gap-3  my-2  '
+                                                                    key={value}
+                                                                    onClick={() => handleItemsNumber(value)}
 
-                                                            >
-                                                                <div style={{ width: '16px', textAlign: 'center' }}>
-                                                                    {
-                                                                        pageNumber === value && <span><IoIosCheckmark className='fs-5 text-success'></IoIosCheckmark></span>
-                                                                    }
-                                                                </div>
-                                                                {value}
-                                                            </li>
-
+                                                                >
+                                                                    <div style={{ width: '16px', textAlign: 'center' }}>
+                                                                        {
+                                                                            pageNumber === value && <span><IoIosCheckmark className='fs-5 text-success'></IoIosCheckmark></span>
+                                                                        }
+                                                                    </div>
+                                                                    {value}
+                                                                </li>
+ 
+                                                            </ClickAwayListener>
                                                         ))
                                                     }
 
@@ -89,26 +93,28 @@ const Listing = () => {
                                     <div className='position-relative'>
                                         <Button className='pt-2 pb-2 ps-5 pe-5 text-dark' variant="outlined" onClick={() => setsortByDropDown(!issortByDropDown)}>
 
-                                            Sort By : <span className='text-dark' style={{fontSize:'10px'}}>{sortby}</span>
+                                            Sort By : <span className='text-dark' style={{ fontSize: '10px' }}>{sortby}</span>
                                         </Button>
                                         {
                                             issortByDropDown == true &&
                                             <div className='sortby-dropdown-menu'>
                                                 <ul className='list list-inline cursor'>
                                                     {
-                                                        ['Default', 'Oldest', 'Newest', 'Price:Low to high', 'Price: High to low', 'Name: A-Z', 'Name:Z-A', 'Rating:Low to High', 'Rating: High to low'].map((value) => (
-                                                            <li
-                                                                className=' d-flex gap-3  my-2  '
+                                                        ['Default', 'Oldest', 'Newest', 'Price:Low to high', 'Price: High to low', 'Name: A-Z', 'Name:Z-A', 'Rating:Low to High', 'Rating: High to low'].map((value,idx) => (
+                                                           <ClickAwayListener key={idx} onClickAway={()=>setsortByDropDown(false)}>
+                                                             <li
+                                                                className='p-1 d-flex gap-3  my-2  '
                                                                 key={value}
                                                                 onClick={() => handleSortBy(value)}
                                                             >
                                                                 <div style={{ width: '16px', textAlign: 'center' }}>
                                                                     {
-                                                                        sortby === value && <span><IoIosCheckmark className='fs-5 text-success'></IoIosCheckmark></span>
+                                                                        sortby === value && <span><IoIosCheckmark className='fs-5 check text-success'></IoIosCheckmark></span>
                                                                     }
                                                                 </div>
                                                                 {value}
                                                             </li>
+                                                           </ClickAwayListener>
                                                         ))
                                                     }
                                                 </ul>

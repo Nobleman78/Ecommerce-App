@@ -18,8 +18,8 @@ const Sidebar = () => {
     };
 
     return (
-        <div className="conrainer-fluid ">
-            <div className='row d-grid'>
+        <div className="conrainer-fluid position-relative ">
+            <div className='row d-grid '>
                 <div className='col-12 col-md-12 col-lg-3 w-sm-75 ms-2 sidebar w-100 w-md-75 rounded-3 shadow mt-4'>
                     <h3 className='title mt-2'>Catagory</h3>
                     <hr className='w-75 ' />

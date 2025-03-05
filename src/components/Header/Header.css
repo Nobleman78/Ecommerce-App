@@ -8,6 +8,14 @@ header{
     
     
 }
+.headerWrapper.fixed{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 1000;
+    background: #fff;
+}
 /* This is for the logo */
 .img-fixed{
     width: 149px;
