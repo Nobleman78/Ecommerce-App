@@ -1,0 +1,19 @@
+.notFound{
+    width: 100%;
+    height: auto;
+    padding: 45px 0px;
+}
+.notFound .box{
+    width: 45%;
+    height: auto;
+    padding: 10px 30px;
+
+
+}
+.notfound-title{
+    width: 60%;
+}
+.back-to-home{
+    width: 20%;
+   
+}

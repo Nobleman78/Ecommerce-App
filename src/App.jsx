@@ -18,6 +18,7 @@ import Footer from './components/Footer/Footer.jsx';
 import Listing from './components/Pages/Listing/Listing.jsx';
 import Newsletter from './components/Newsletter/Newsletter.jsx';
 import Features from './components/Features/Features.jsx';
+import Nofound from './components/Pages/Nofound/Nofound.jsx';
 
 function App() {
 
@@ -29,6 +30,8 @@ function App() {
           <Routes>
             <Route exact={true} path="/" element={<MainPart></MainPart>}></Route>
             <Route eaxct={true} path="/listing" element={<Listing> </Listing>}></Route>
+            <Route eaxct={true} path="*" element={<Nofound> </Nofound>}></Route>
+            
           </Routes>
           <Newsletter></Newsletter>
           <Features></Features>
