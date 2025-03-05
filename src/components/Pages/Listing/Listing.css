@@ -10,3 +10,37 @@
     border-radius: 10px;
 
 }
+.show-dropdown-menu{
+    position: absolute;
+    top: 100%;
+    width: 140px;
+    height: auto;
+    left: 0px;
+    right: -48px;
+    background: #fff;
+    margin-top: 10px;
+    z-index: 100;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 20%);
+    padding: 15px;
+    border-radius: 5px;
+}
+.sortby-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    width: 226px;
+    height: auto;
+    left: 0px;
+    right: -48px;
+    background: #fff;
+    margin-top: 10px;
+    z-index: 100;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 20%);
+    padding: 15px;
+    border-radius: 5px;
+
+    
+}
+.itemNumber{
+    top: 30%;
+    
+}

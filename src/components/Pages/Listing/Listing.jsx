@@ -2,11 +2,28 @@ import { Link } from 'react-router-dom';
 import { FaArrowRight } from "react-icons/fa6";
 import Button from '@mui/material/Button';
 import './Listing.css'
+import { IoIosCheckmark } from "react-icons/io";
 import Sidebar from '../../Sidebar/Sidebar';
 import PopularProduct from '../../PopularProducts/PopularProduct';
 import { useState } from 'react';
+import sortBy from 'sort-by';
+
 const Listing = () => {
-    const [isOpenDropDown, setOpenDropDown] = useState(false)
+    const [isshowDropDown, setShowDropDown] = useState(false)
+    const [issortByDropDown, setsortByDropDown] = useState(false);
+
+    // How many numbers of item will be shown in the page.
+
+    const [pageNumber, setPageNumber] = useState(12);
+    const handleItemsNumber = (value) => {
+        setPageNumber(value)
+    }
+
+   const [sortby, setSortBy] = useState('Default')
+   const handleSortBy=(value)=>{
+    setSortBy(value)
+   }
+
     return (
         <div className="container-fluid">
             <section className="listingPage">
@@ -35,25 +52,68 @@ const Listing = () => {
                         <div className='col-12 col-md-12 col-lg-9 '>
                             <div className='d-flex justify-content-between '>
                                 <p className='mt-4 ms-4'>We find <span className='text-success'>34</span> items for you</p>
-                                <div className='d-flex align-items-center gap-2 mt-4 ms-4' >
-                                    <div className='tab_ position-relative'>
-                                        <Button variant="outlined" onClick={() => setOpenDropDown(!isOpenDropDown)}>
-                                
-                                            Show
+                                <div className='d-flex align-items-center me-5 gap-2 mt-4 ms-4' >
+                                    <div className='position-relative '>
+                                        <Button className='pt-2 pb-2 text-dark ps-5 pe-5' variant="outlined" onClick={() => setShowDropDown(!isshowDropDown)}>
+                                            Show :  <span className='ms-1'>{pageNumber}</span>
                                         </Button>
                                         {
-                                            isOpenDropDown == true &&
-                                            <div className='user-dropdown-menu'>
-                                                <ul>
-                                                    <li>Login</li>
-                                                    <li>Registration</li>
+                                            isshowDropDown == true &&
+                                            <div className='show-dropdown-menu'>
+                                                <ul className='list list-inline cursor position-relative'>
+
+                                                    {
+
+                                                        [12, 24, 36].map((value) => (
+                                                            <li className=' d-flex gap-3  my-2  '
+                                                                key={value}
+                                                                onClick={() => handleItemsNumber(value)}
+
+                                                            >
+                                                                <div style={{ width: '16px', textAlign: 'center' }}>
+                                                                    {
+                                                                        pageNumber === value && <span><IoIosCheckmark className='fs-5 text-success'></IoIosCheckmark></span>
+                                                                    }
+                                                                </div>
+                                                                {value}
+                                                            </li>
+
+                                                        ))
+                                                    }
+
 
                                                 </ul>
                                             </div>
                                         }
                                     </div>
-                                    <div>
-                                        <Button variant="outlined">Sort By</Button>
+                                    <div className='position-relative'>
+                                        <Button className='pt-2 pb-2 ps-5 pe-5 text-dark' variant="outlined" onClick={() => setsortByDropDown(!issortByDropDown)}>
+
+                                            Sort By : <span className='text-dark' style={{fontSize:'10px'}}>{sortby}</span>
+                                        </Button>
+                                        {
+                                            issortByDropDown == true &&
+                                            <div className='sortby-dropdown-menu'>
+                                                <ul className='list list-inline cursor'>
+                                                    {
+                                                        ['Default', 'Oldest', 'Newest', 'Price:Low to high', 'Price: High to low', 'Name: A-Z', 'Name:Z-A', 'Rating:Low to High', 'Rating: High to low'].map((value) => (
+                                                            <li
+                                                                className=' d-flex gap-3  my-2  '
+                                                                key={value}
+                                                                onClick={() => handleSortBy(value)}
+                                                            >
+                                                                <div style={{ width: '16px', textAlign: 'center' }}>
+                                                                    {
+                                                                        sortby === value && <span><IoIosCheckmark className='fs-5 text-success'></IoIosCheckmark></span>
+                                                                    }
+                                                                </div>
+                                                                {value}
+                                                            </li>
+                                                        ))
+                                                    }
+                                                </ul>
+                                            </div>
+                                        }
                                     </div>
                                 </div>
                             </div>
